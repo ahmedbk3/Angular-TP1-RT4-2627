@@ -1,0 +1,10 @@
+<h2>Exercise 1 : Color box</h2>
+<div class="color-box mb-3" [style.backgroundColor]="color() || null"></div>
+<div class="input-group">
+ <input #colorInput type="text" class="form-control"
+ placeholder="Type a color: red, #0d6efd, rgb(10, 200, 30)..."
+ (input)="onColorTyped(colorInput.value)">
+ <button type="button" class="btn btn-outline-secondary" (click)="reset(colorInput)">
+ Reset
+ </button>
+</div>
