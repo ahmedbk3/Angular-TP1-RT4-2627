@@ -1,0 +1,14 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark mb-4">
+ <div class="container">
+ <a class="navbar-brand" routerLink="/">RT4 - TP1</a>
+ <ul class="navbar-nav me-auto">
+ @for (link of links; track link.path) {
+ <li class="nav-item">
+ <a class="nav-link" [routerLink]="link.path" routerLinkActive="active">
+ {{ link.label }}
+ </a>
+ </li>
+ }
+ </ul>
+ </div>
+</nav>
