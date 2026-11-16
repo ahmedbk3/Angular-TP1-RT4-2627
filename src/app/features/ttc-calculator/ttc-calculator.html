@@ -1,0 +1,32 @@
+<p>ttc-calculator works!</p>
+<h2>Exercise 2 : TTC calculator</h2>
+<div class="row g-3">
+ <div class="col-md-4">
+ <label for="price" class="form-label">Prix HT</label>
+ <input id="price" type="number" min="0" class="form-control" [(ngModel)]="price">
+ </div>
+ <div class="col-md-4">
+ <label for="quantity" class="form-label">Quantite</label>
+ <input id="quantity" type="number" min="1" class="form-control" [(ngModel)]="quantity">
+ </div>
+ <div class="col-md-4">
+ <label for="tva" class="form-label">TVA (%)</label>
+ <input id="tva" type="number" min="0" class="form-control" [(ngModel)]="tva">
+ </div>
+</div>
+<div class="row g-3 mt-1">
+ <div class="col-md-4">
+ <div class="alert alert-info mb-0">Prix unitaire TTC : {{ unitTtc() | currency }}</div>
+ </div>
+ <div class="col-md-4">
+ <div class="alert alert-success mb-0">Prix total TTC : {{ totalTtc() | currency }}</div>
+ </div>
+ <div class="col-md-4">
+ <div class="alert alert-danger mb-0">
+ Discount : {{ discount() | currency }}
+ @if (discountRate() > 0) {
+ <span class="badge text-bg-danger ms-1">{{ discountRate() | percent }}</span>
+ }
+ </div>
+ </div>
+</div>

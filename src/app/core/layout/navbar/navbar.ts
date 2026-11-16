@@ -12,10 +12,10 @@ interface NavLink {
  styleUrl: './navbar.css',
 })
 export class Navbar {
- // The menu is DATA, the template just loops over it (no copy-paste of <a> tags).
  protected readonly links: NavLink[] = [
  // ---- Kiki's links (exercises 1, 2, 3, 5, 9) ----
  { label: 'Color', path: '/color' },
+ { label: 'TTC', path: '/ttc' },
  // ---- Teammate's links (exercises 4, 6, 7, 8) ----
  ];
 }
