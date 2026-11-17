@@ -13,9 +13,7 @@ interface NavLink {
 })
 export class Navbar {
  protected readonly links: NavLink[] = [
- // ---- Kiki's links (exercises 1, 2, 3, 5, 9) ----
  { label: 'Color', path: '/color' },
  { label: 'TTC', path: '/ttc' },
- // ---- Teammate's links (exercises 4, 6, 7, 8) ----
  ];
 }
