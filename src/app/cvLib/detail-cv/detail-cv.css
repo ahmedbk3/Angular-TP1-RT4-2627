@@ -1,0 +1,22 @@
+@import "../../../assets/css/rotating-card.css";
+
+.card-container {
+  max-width: 24rem;
+  margin-inline: auto;
+}
+
+.card {
+  border: 0;
+  background: transparent;
+  height: 100%;
+}
+
+.card-container:focus-visible .card {
+  transform: rotateY(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    transition: none;
+  }
+}

@@ -1,0 +1,22 @@
+@let cv = personne();
+<div class="card-container" tabindex="0" [attr.aria-label]="'CV de ' + cv.firstname + ' ' + cv.name">
+  <article class="card">
+    <div class="front">
+      <div class="cover"><img src="images/rotating_card_thumb2.png" alt=""></div>
+      <div class="user"><img [src]="cv.path" alt=""></div>
+      <div class="content text-center">
+        <h3 class="name">{{ cv.firstname }} {{ cv.name }}</h3>
+        <p class="profession">{{ cv.job }}</p>
+        <p>{{ cv.age }} ans</p>
+      </div>
+    </div>
+    <div class="back">
+      <div class="header"><h4>{{ cv.firstname }} {{ cv.name }}</h4></div>
+      <dl class="content text-center">
+        <dt>Identifiant du CV</dt><dd>{{ cv.id }}</dd>
+        <dt>CIN</dt><dd>{{ cv.cin }}</dd>
+        <dt>Métier</dt><dd>{{ cv.job }}</dd>
+      </dl>
+    </div>
+  </article>
+</div>

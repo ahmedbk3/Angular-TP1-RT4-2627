@@ -1,0 +1,7 @@
+<ul class="list-group" aria-label="CV inscrits">
+  @for (personne of personnes; track personne.id) {
+    <li class="list-group-item p-0">
+      <app-item-cv [personne]="personne" (selection)="selection.emit($event)"></app-item-cv>
+    </li>
+  }
+</ul>

@@ -15,5 +15,7 @@ export class Navbar {
  protected readonly links: NavLink[] = [
  { label: 'Color', path: '/color' },
  { label: 'TTC', path: '/ttc' },
+ { label: 'CV', path: '/cv' },
+ { label: 'Miniword', path: '/miniword' },
  ];
 }

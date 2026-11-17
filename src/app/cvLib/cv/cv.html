@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-md-6">
+    <app-liste-cv [personnes]="personnes" (selection)="selection.set($event)"></app-liste-cv>
+  </div>
+  <div class="col-md-6">
+    @if (selection(); as personne) {
+      <app-detail-cv [personne]="personne"></app-detail-cv>
+    }
+  </div>
+</div>

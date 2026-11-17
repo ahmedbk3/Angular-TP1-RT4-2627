@@ -1,0 +1,12 @@
+<input type="text" aria-label="Texte à modifier" [(ngModel)]="text" [ngStyle]="{ color: color, 'font-size': size, 'font-family': font }">
+
+<input type="color" [(ngModel)]="color">
+
+<input type="number" #sizeInput
+       (input)="changeSize(sizeInput.valueAsNumber)">
+<select name="font" id="font" aria-label="Police" [(ngModel)]="font">
+<option value="arial">Arial</option>
+<option value="serif">Serif</option>
+<option value="sans-serif">Sans-Serif</option>
+</select>
+<p [ngStyle]="{ color: color, 'font-size': size, 'font-family': font }">{{ text }}</p>
